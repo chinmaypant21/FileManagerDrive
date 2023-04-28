@@ -105,12 +105,10 @@ function App() {
         
         {
           isLoggedIn
-            ? <div style={{ display: 'flex', flexDirection: 'row', gap: '5px', alignItems: 'center' }}>
+            ? <div className='nav-left-container'>
               <span>{signedInUser.email}</span>
               <div>
-                <img src={signedInUser.imageURL}
-                  style={{ height: '50px', width: '50px', borderRadius: '50%', border: '1px solid blue' }}
-                />
+                <img src={signedInUser.imageURL} className='profile-img'/>
               </div>
               <div className='nav-btn-container'>
                 <label htmlFor='uploadFileInput'>
