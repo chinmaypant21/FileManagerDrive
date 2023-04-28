@@ -2,6 +2,8 @@
 
 #### Clone project repo : ```git clone https://github.com/chinmaypant21/FileManagerDrive.git```
 #### Install node modules : Inside project folder ```npm -i```
+#### Get Google Drive API_KEY and CLIENT_ID from [Google Cloud Console](https://developers.google.com/drive/api)
+#### Create a .env file from .env.example and set the API_KEY and CLIENT_ID there
 #### Run project in Development mode: ```npm run start```
 #### Build project for production: ```npm run build```
 
