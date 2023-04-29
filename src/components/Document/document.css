@@ -20,5 +20,5 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    width: 15vw; /* set the width of the text container */
+    width: 15vw;
 }

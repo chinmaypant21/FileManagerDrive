@@ -1,24 +1,6 @@
 import React from 'react'
 import './navbar.css'
-import { gapi } from 'gapi-script';
-import { handleUpload } from '../../utils';
-
-
-const handleAuthClick = (setIsLoggedIn,event) => {
-    gapi.auth2.getAuthInstance().signIn()
-      .then(() => {
-        setIsLoggedIn(true)
-      })
-  };
-
-  const handleSignOutClick = (setIsLoggedIn,event) => {
-    const auth2 = gapi.auth2.getAuthInstance()
-    auth2.signOut().then(() => {
-      auth2.disconnect()
-      setIsLoggedIn(gapi.auth2.getAuthInstance().isSignedIn.get())
-    }
-    );
-  }
+import { handleAuthClick, handleSignOutClick, handleUpload } from '../../utils';
 
 const Navbar = (props) => {
     const user = props.user
@@ -37,28 +19,28 @@ const Navbar = (props) => {
 
             {
                 isLoggedIn
-                    ? <div className='nav-left-container'>
-                        <span>{user.email}</span>
+                    ? <div className='nav-right-container'>
+                        <span className='nav-text-wrap'>{user.email}</span>
                         <div>
                             <img src={user.imageURL} className='profile-img' />
                         </div>
                         <div className='nav-btn-container'>
                             <label htmlFor='uploadFileInput'>
                                 <span className='btn-wrapper'>
-                                    Upload File
+                                    Upload
                                 </span>
-                                <input type='file' id='uploadFileInput' onChange={(e) => { handleUpload(e) }} style={{ display: 'none' }} />
+                                <input type='file' id='uploadFileInput' onChange={handleUpload} style={{ display: 'none' }} />
                             </label>
                         </div>
                         <div className='nav-btn-container'
-                            onClick={e => {handleSignOutClick(setIsLoggedIn,e)}}
+                            onClick={handleSignOutClick.bind(this,setIsLoggedIn)}
                         >
                             <span className='btn-wrapper'>Sign Out</span>
                         </div>
                     </div>
 
                     : <div className='nav-btn-container'
-                        onClick={(e) => {handleAuthClick(setIsLoggedIn,e)}}
+                        onClick={handleAuthClick.bind(this, setIsLoggedIn)}
                     >
                         <span className='btn-wrapper'>Sign In</span>
                     </div>

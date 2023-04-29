@@ -5,7 +5,7 @@
     margin: 0.5em 1em;
 }
 
-.nav-left-container {
+.nav-right-container {
     display: flex;
     flex-direction: row;
     gap: 5px;
@@ -16,6 +16,13 @@
     display: flex;
     flex-direction: row;
     gap: 1em;
+}
+
+.nav-text-wrap{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 18vw; 
 }
 
 .profile-img {
@@ -39,4 +46,11 @@
     border-radius: 0.5em;
     color: white;
     cursor: pointer;
+}
+
+@media screen and (max-width:780px) {
+    .nav-container{
+        flex-direction: column;
+        align-items: center;
+    }
 }
