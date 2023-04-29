@@ -1,8 +1,13 @@
+## Live at [gdrivemanager.netlify.app](https://gdrivemanager.netlify.app)
 ## Instructions
 
 #### Clone project repo : ```git clone https://github.com/chinmaypant21/FileManagerDrive.git```
 #### Install node modules : Inside project folder ```npm -i```
+#### Get Google Drive API_KEY and CLIENT_ID from [Google Cloud Console](https://developers.google.com/drive/api)
+#### Create a .env file from .env.example and set the API_KEY and CLIENT_ID there
+#### In the console, set the callback URL as ```http://localhost:3000```
 #### Run project in Development mode: ```npm run start```
+This will start webapp in development mode at ```localhost:3000```
 #### Build project for production: ```npm run build```
 
 ### Initial Page
