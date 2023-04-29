@@ -1,9 +1,9 @@
 import { gapi } from 'gapi-script';
 import { useEffect, useState } from 'react';
-import { handleUpload } from './utils';
+import { handleAuthClick, handleUpload } from './utils';
 import { Search, Loading, DocumentTable, Button } from './components';
-import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import './App.css';
 
 
 const DISCOVERY_DOCS = ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest'];
@@ -72,13 +72,6 @@ function App() {
       );
   };
 
-  const handleAuthClick = (event) => {
-    gapi.auth2.getAuthInstance().signIn()
-      .then(() => {
-        setIsLoggedIn(true)
-      })
-  };
-
   const handleClientLoad = () => {
     gapi.load('client:auth2', initClient)
   };
@@ -100,7 +93,7 @@ function App() {
               }
             </>
             : <>
-              <div className='login-element-container' onClick={handleAuthClick}>
+              <div className='login-element-container' onClick={handleAuthClick.bind(this,setIsLoggedIn)}>
                 Login to Access Drive
               </div>
             </>
