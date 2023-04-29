@@ -14,17 +14,14 @@ const DocumentItem = ({document}) => {
     }
 
     return (
-    <tr
-        style={{display:'flex', justifyContent:'space-between',borderBottom:'1px solid #c5c5c5',gap:'0.5em',alignItems:'center'}}
-    >
-            <td style={{display:'flex',gap:'0.5em', flex:'2'}}>
-                <img src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTogax9zpIngdIedKws_YR74E7zM36-uRqFYw'}
-                    height={35}/>
-                {/* <img src={'https://images.freeimages.com/fic/images/icons/2813/flat_jewels/32/file.png'} /> */}
-                <span>{document.name}</span>
-            </td>
-            <td style={{flex:'1'}}>{getDocumentType(document.mimeType)}</td>
-            <td style={{display:'flex',flex:'1',justifyContent:'flex-end'}}>{getDate(document.modifiedTime)}</td>
+    <tr>
+        <td style={{display:'flex',gap:'0.5em', flex:'2'}}>
+            <img src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTogax9zpIngdIedKws_YR74E7zM36-uRqFYw'}
+                height={35}/>
+            <span>{document.name}</span>
+        </td>
+        <td style={{flex:'1'}}>{getDocumentType(document.mimeType)}</td>
+        <td style={{display:'flex',flex:'1',justifyContent:'flex-end'}}>{getDate(document.modifiedTime)}</td>
     </tr>
     )
 }

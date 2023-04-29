@@ -1,0 +1,42 @@
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.5em 1em;
+}
+
+.nav-left-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.nav-logo-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.profile-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid blue;
+    cursor: pointer;
+}
+
+.nav-btn-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.btn-wrapper {
+    background-color: #3e7df2;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    color: white;
+    cursor: pointer;
+}

@@ -1,14 +1,13 @@
 import React from 'react'
 import DocumentItem from './DocumentItem'
+import './document.css';
+
 
 const DocumentTable = ({documents}) => {
   return (
-    <table
-        style={{display:'flex', flexDirection:'column',width:'80%',margin:'auto',gap:'0.5em',
-            height:'88vh',overflowY:'scroll'}}>
+    <table className='document-table'>
         <thead>
-            <tr
-                style={{display:'flex', justifyContent:'space-between', borderBottom:'1px solid #c5c5c5',padding:'1em',fontWeight:'600'}}>
+            <tr className='document-table-row'>
             <td style={{display:'flex',flex:2}}>Name</td>
             <td style={{flex:1}}>Type</td>
             <td style={{display:'flex',justifyContent:'flex-end',flex:1}}>Last Modified</td>

@@ -1,0 +1,17 @@
+.document-table{
+    display:flex;
+    flex-direction:column;
+    width:70%;
+    gap:0.5em;
+}
+
+.document-table thead tr{
+    font-weight: 600;
+}
+
+.document-table tr{
+    display:flex;
+    justify-content:space-between;
+    border-bottom: 1px solid #c5c5c5;
+    padding: 1em;
+}
