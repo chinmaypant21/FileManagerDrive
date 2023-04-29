@@ -18,7 +18,7 @@ const DocumentItem = ({document}) => {
         <td style={{display:'flex',gap:'0.5em', flex:'2'}}>
             <img src={'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTogax9zpIngdIedKws_YR74E7zM36-uRqFYw'}
                 height={35}/>
-            <span>{document.name}</span>
+            <span className='row-name'>{document.name}</span>
         </td>
         <td style={{flex:'1'}}>{getDocumentType(document.mimeType)}</td>
         <td style={{display:'flex',flex:'1',justifyContent:'flex-end'}}>{getDate(document.modifiedTime)}</td>

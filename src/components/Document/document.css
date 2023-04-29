@@ -15,3 +15,10 @@
     border-bottom: 1px solid #c5c5c5;
     padding: 1em;
 }
+
+.document-table .row-name{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 15vw; /* set the width of the text container */
+}
